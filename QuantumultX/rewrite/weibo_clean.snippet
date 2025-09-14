@@ -123,10 +123,10 @@ host, bootrealtime.uve.weibo.com, reject
 # 7. 个人主页广告营销内容拦截
 # =====================================
 # 拦截个人主页中的钱包、超话、广告中心等营销内容
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/me url-and-header script-response-body https://raw.githubusercontent.com/rubbit3/wool_scripts/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/me Weibo url-and-header script-response-body https://raw.githubusercontent.com/rubbit3/wool_scripts/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 拦截个人主页相关的API接口
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/container_timeline url-and-header script-response-body https://raw.githubusercontent.com/rubbit3/wool_scripts/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/container_timeline Weibo url-and-header script-response-body https://raw.githubusercontent.com/rubbit3/wool_scripts/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # =====================================
 # 8. 会员功能解锁
