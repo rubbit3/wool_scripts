@@ -139,3 +139,6 @@ host, bootrealtime.uve.weibo.com, reject
 
 # 解锁微博会员APP图标
 ^https?:\/\/new\.vip\.weibo\.c(n|om)/aj/appicon/list Weibo url-and-header script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
+
+# MITM域名配置
+hostname = *.weibo.com, *.weibo.cn, weibo.com, weibo.cn, *.uve.weibo.com, *.api.weibo.cn, *.weibointl.api.weibo.cn, m.weibo.cn, i.api.weibo.cn, weibointl.api.weibo.cn, sdkapp.uve.weibo.com, bootpreload.uve.weibo.com, bootrealtime.uve.weibo.com
