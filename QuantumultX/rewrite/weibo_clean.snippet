@@ -80,31 +80,31 @@ host, bootrealtime.uve.weibo.com, reject
 # 4. 主要页面广告拦截（使用脚本处理）
 # =====================================
 # 发现页广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 热搜页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 话题页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 超话页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 详情页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # Tab页分组
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 评论区广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/(container_detail_comment|container_detail_mix)\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/(container_detail_comment|container_detail_mix)\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # 转发区广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail_forward\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail_forward\? Weibo url-and-header script-response-body https://github.com/rubbit3/wool_scripts/raw/refs/heads/main/Scripts/weibo/weibo_profile_clean.js
 
 # =====================================
 # 5. 综合去广告脚本（主要功能）
