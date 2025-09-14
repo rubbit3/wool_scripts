@@ -311,84 +311,20 @@ function deleteCommonAndSemanticBrandParams(item) {
 
 // 移除个人主页营销内容
 function removeProfileMarketingContent(data) {
-  if (!data.items || !Array.isArray(data.items)) {
-    return;
+  console.log('开始处理个人主页营销内容...');
+  
+  // 直接清空items数组，移除所有营销内容
+  if (data.items && Array.isArray(data.items)) {
+    console.log('原始items长度:', data.items.length);
+    data.items = [];
+    console.log('已清空items数组');
   }
   
-  // 需要移除的营销内容itemId列表
-  const removeItemIds = [
-    '100505_-_pay',           // 我的钱包
-    '100505_-_chaohua',       // 超话社区
-    '100505_-_promote',       // 广告中心
-    '100505_-_ordercenter',   // 订单中心
-    '100505_-_productcenter', // 产品中心
-    '100505_-_mypay_new',     // 我的支付
-    '100505_-_newlvzhou2',    // 绿洲相关
-    '100505_-_jieqi2025',     // 节气相关营销
-    '100505_-_profilevisitor', // 访客记录
-    '100505_-_top8',          // 顶部8个功能模块（包含钱包等）
-    '100505_-_manage'         // 管理模块
-  ];
-  
-  // 营销关键词列表
-  const marketingKeywords = [
-    '钱包', '超话', '广告中心', '订单中心', '产品中心', 
-    '支付', '充值', '会员', 'VIP', '绿洲', '节气'
-  ];
-  
-  // 递归过滤函数
-  function filterMarketingContent(items) {
-    if (!Array.isArray(items)) return items;
-    
-    return items.filter(item => {
-      // 检查itemId
-      if (item.itemId && removeItemIds.includes(item.itemId)) {
-        console.log(`移除营销内容: ${item.itemId}`);
-        return false;
-      }
-      
-      // 检查内容中的营销关键词
-      if (item.content && typeof item.content === 'object') {
-        const content = item.content.content || '';
-        if (marketingKeywords.some(keyword => content.includes(keyword))) {
-          console.log(`移除包含营销关键词的内容: ${content}`);
-          return false;
-        }
-      }
-      
-      // 检查标题中的营销关键词
-      if (item.title && typeof item.title === 'object') {
-        const title = item.title.content || '';
-        if (marketingKeywords.some(keyword => title.includes(keyword))) {
-          console.log(`移除包含营销关键词的标题: ${title}`);
-          return false;
-        }
-      }
-      
-      // 递归处理嵌套的items数组
-      if (item.items && Array.isArray(item.items)) {
-        item.items = filterMarketingContent(item.items);
-      }
-      
-      // 递归处理其他可能的嵌套数组
-      if (item.subItems && Array.isArray(item.subItems)) {
-        item.subItems = filterMarketingContent(item.subItems);
-      }
-      
-      return true;
-    });
-  }
-  
-  // 处理主items数组
-  console.log('处理主items数组，原始长度:', data.items.length);
-  data.items = filterMarketingContent(data.items);
-  console.log('过滤后长度:', data.items.length);
-  
-  // 处理其他可能的数组字段
+  // 清空其他可能的数组字段
   if (data.data && Array.isArray(data.data)) {
-    console.log('处理data数组，原始长度:', data.data.length);
-    data.data = filterMarketingContent(data.data);
-    console.log('过滤后长度:', data.data.length);
+    console.log('原始data长度:', data.data.length);
+    data.data = [];
+    console.log('已清空data数组');
   }
   
   // 移除VIP相关背景图片
@@ -408,4 +344,6 @@ function removeProfileMarketingContent(data) {
     delete data.vipInfo;
     console.log('移除VIP信息');
   }
+  
+  console.log('个人主页营销内容已完全清空');
 }
