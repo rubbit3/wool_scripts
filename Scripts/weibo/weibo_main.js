@@ -615,7 +615,7 @@ function removeHome(data) {
 					newItems.push(item);
 				}
 			}
-		} else if (['mine_attent_title', '100505_-_meattent_pic', '100505_-_newusertask', '100505_-_vipkaitong', '100505_-_hongbao2022', '100505_-_adphoto', '100505_-_hongrenjie2022', '100505_-_weibonight2023'].indexOf(itemId) > -1) {
+		} else if (['mine_attent_title', '100505_-_meattent_pic', '100505_-_newusertask', '100505_-_vipkaitong', '100505_-_hongbao2022', '100505_-_adphoto', '100505_-_hongrenjie2022', '100505_-_weibonight2023', '100505_-_pay', '100505_-_chaohua', '100505_-_promote', '100505_-_ordercenter', '100505_-_productcenter', '100505_-_mypay_new', '100505_-_newlvzhou2', '100505_-_jieqi2025', '100505_-_profilevisitor', '100505_-_manage'].indexOf(itemId) > -1) {
 			continue;
 		} else if (itemId === '100505_-_advideo') {
 			if (item?.header?.title?.content === '微博之夜') {

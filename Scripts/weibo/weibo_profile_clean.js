@@ -171,8 +171,9 @@ try {
 
   // 10、个人主页营销内容处理
   if (url.includes("/profile/me") || url.includes("/profile/container_timeline")) {
+    console.log('处理个人主页营销内容...'); 
     removeProfileMarketingContent(resp_data);
-    console.log('处理个人主页营销内容结束💕💕');
+    console.log('处理个人主页营销内容结束');
   }
 
   console.log('广告数据处理完毕🧧🧧');
