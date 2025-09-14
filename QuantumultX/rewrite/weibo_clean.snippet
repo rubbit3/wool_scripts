@@ -50,8 +50,8 @@ host, bootrealtime.uve.weibo.com, reject
 # 2. 微博国际版去广告
 # =====================================
 # 热门视频和热推荐
-^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
+^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
 
 # 趋势页、开屏广告、用户中心等
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js
