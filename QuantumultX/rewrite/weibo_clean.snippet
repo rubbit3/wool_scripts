@@ -120,7 +120,16 @@ host, bootrealtime.uve.weibo.com, reject
 ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 # =====================================
-# 7. 会员功能解锁
+# 7. 个人主页广告营销内容拦截
+# =====================================
+# 拦截个人主页中的钱包、超话、广告中心等营销内容
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/me Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_profile_clean.js
+
+# 拦截个人主页相关的API接口
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/profile\/container_timeline Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_profile_clean.js
+
+# =====================================
+# 8. 会员功能解锁
 # =====================================
 # 自定义tab皮肤
 ^https?:\/\/api\.weibo\.c(n|om)\/2\/!\/client\/light_skin Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
